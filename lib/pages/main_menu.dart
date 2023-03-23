@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pert3slice/pages/Home_Page2.dart';
 
 class MainMenuPage extends StatelessWidget {
   const MainMenuPage({super.key});
@@ -128,14 +129,23 @@ class MainMenuPage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Container(
-                        width: 76,
-                        height: 76,
-                        decoration: const BoxDecoration(
-                            image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: AssetImage("assets/img-profile.png"))),
-                      )
+                      GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const HomePage2()),
+                            );
+                          },
+                          child: Container(
+                            width: 76,
+                            height: 76,
+                            decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                    fit: BoxFit.cover,
+                                    image:
+                                        AssetImage("assets/img-profile.png"))),
+                          ))
                     ],
                   ),
                   doctorCard("assets/img-doc1.png", "Dr Mawar N",

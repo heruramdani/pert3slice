@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pert3slice/pages/login_page.dart';
 
 import 'main_menu.dart';
 
@@ -54,7 +55,7 @@ class GetStartedPage extends StatelessWidget {
                       'Patient ',
                       style: GoogleFonts.poppins(
                         fontSize: 24,
-                        color: const Color(0xff308CF8),
+                        color: const Color(0xff0096DD),
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -96,8 +97,7 @@ class GetStartedPage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const MainMenuPage()),
+                    MaterialPageRoute(builder: (context) => const LoginPage()),
                   );
                 },
                 child: Center(
